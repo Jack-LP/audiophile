@@ -5,8 +5,8 @@ import { ShoppingCartIcon } from '@heroicons/react/24/outline';
 
 const Navbar = () => {
   return (
-    <div className='container z-10 fixed mx-auto left-0 right-0'>
-      <nav className='border-b-gray-300 border-b-2 py-6 text-white'>
+    <div className='z-10 fixed left-0 right-0 backdrop-blur-xl'>
+      <nav className='border-b-gray-300 border-b-2 p-6 text-white container mx-auto'>
         <ul className='flex justify-between uppercase items-center'>
           <li>
             <a href='#' className=''>
@@ -14,9 +14,6 @@ const Navbar = () => {
             </a>
           </li>
           <div className='flex gap-10'>
-            <li>
-              <a href='#'>Home</a>
-            </li>
             <li>
               <a href='#'>Headphones</a>
             </li>

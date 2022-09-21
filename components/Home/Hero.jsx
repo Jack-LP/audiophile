@@ -1,5 +1,5 @@
 import React from 'react';
-import HeroImg from '../../../public/img/image-hero.jpg';
+import ProductBtn from '../Common/ProductBtn';
 
 const Hero = () => {
   return (
@@ -16,9 +16,7 @@ const Hero = () => {
             Experience natural, lifelike audio and exceptional build quality
             made for the passionate music enthusiast
           </p>
-          <button className='bg-orange-400 text-white uppercase font-bold py-3 px-6'>
-            See Product
-          </button>
+          <ProductBtn bg={'bg-pale-orange'} text={'text-white'} />
         </div>
       </div>
     </div>

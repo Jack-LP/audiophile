@@ -1,7 +1,8 @@
 import Head from 'next/head';
 import Navbar from '../components/common/Navbar';
-import Hero from '../components/common/home/Hero';
-import CategorySection from '../components/common/home/CategorySection';
+import Hero from '../components/home/Hero';
+import CategorySection from '../components/Home/CategorySection/CategorySection';
+import FeaturedSection from '../components/home/FeaturedSection/FeaturedSection';
 
 export default function Home() {
   return (
@@ -13,6 +14,7 @@ export default function Home() {
       <Navbar />
       <Hero />
       <CategorySection />
+      <FeaturedSection />
     </div>
   );
 }

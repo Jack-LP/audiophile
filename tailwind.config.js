@@ -9,6 +9,9 @@ module.exports = {
       backgroundImage: {
         hero: "url('/img/image-hero.jpg')",
       },
+      fontFmily: {
+        body: ['Manrope'],
+      },
     },
   },
   plugins: [],

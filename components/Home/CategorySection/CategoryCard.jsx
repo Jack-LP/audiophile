@@ -5,12 +5,12 @@ import { ChevronRightIcon } from '@heroicons/react/20/solid';
 const CategoryCard = ({ image, title, top }) => {
   return (
     <div className='flex flex-col flex-1 gap-2 items-center bg-stone-200 rounded-lg pb-6 pt-[8rem] relative my-[14rem]'>
-      <div className={`w-[15rem] absolute -top-${top}`}>
+      <div className='w-[15rem] absolute -top-24'>
         <Image alt={title} src={image} />
       </div>
       <h2 className='text-xl font-bold uppercase'>{title}</h2>
       <a
-        className='flex items-center uppercase text-gray-400 font-bold group'
+        className='flex items-center uppercase text-neutral-500 font-bold group'
         href='#'
       >
         <span className='group-hover:-translate-x-1 transition ease-out'>

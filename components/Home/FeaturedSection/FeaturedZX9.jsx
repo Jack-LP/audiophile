@@ -15,7 +15,7 @@ const FeaturedZX9 = () => {
           <br />
           Speaker
         </h1>
-        <p className='text-gray-100 text-md'>
+        <p className='text-gray-100 text-md leading-6'>
           Upgrade to premium speakers that are phenomenally built to deliver
           truly remarkable sound.
         </p>

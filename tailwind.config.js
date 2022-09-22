@@ -16,6 +16,7 @@ module.exports = {
       },
       colors: {
         'pale-orange': '#d87c49',
+        charcoal: '#191919',
       },
     },
   },

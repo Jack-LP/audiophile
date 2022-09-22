@@ -3,7 +3,7 @@ import ProductBtn from '../Common/ProductBtn';
 
 const Hero = () => {
   return (
-    <div className='bg-no-repeat bg-cover bg-center bg-hero min-h-screen relative'>
+    <div className='bg-no-repeat bg-[bottom_right_8rem] bg-hero bg-charcoal min-h-[70vh] relative'>
       <div className='container mx-auto absolute top-1/2 -translate-y-1/2 left-0 right-0'>
         <div className='flex flex-col gap-6 items-start max-w-sm'>
           <h2 className='uppercase tracking-[.55em] text-gray-400'>

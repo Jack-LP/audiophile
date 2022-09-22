@@ -13,12 +13,10 @@ export default function Home() {
         <title>Audiophile</title>
         <link rel='icon' href='/favicon.ico' />
       </Head>
-      <Navbar />
       <Hero />
       <CategorySection />
       <FeaturedSection />
       <AboutSection />
-      <Footer />
     </div>
   );
 }

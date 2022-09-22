@@ -2,6 +2,8 @@ import React from 'react';
 import Head from 'next/head';
 import CategoryHeader from '../../components/Categories/CategoryHeader';
 import ProductDisplay from '../../components/Categories/ProductDisplay';
+import CategorySection from '../../components/Common/CategorySection/CategorySection';
+import AboutSection from '../../components/Common/AboutSection';
 import XX99M1Img from '../../public/img/image-xx99-mark-one.jpg';
 import XX99M2Img from '../../public/img/image-xx99-mark-two.jpg';
 import XX59Img from '../../public/img/image-xx59.jpg';
@@ -52,6 +54,8 @@ const headphones = () => {
         title={headphonesData[2].title}
         description={headphonesData[2].description}
       />
+      <CategorySection />
+      <AboutSection />
     </>
   );
 };

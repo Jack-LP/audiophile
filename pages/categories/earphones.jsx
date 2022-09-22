@@ -2,6 +2,8 @@ import React from 'react';
 import Head from 'next/head';
 import CategoryHeader from '../../components/Categories/CategoryHeader';
 import ProductDisplay from '../../components/Categories/ProductDisplay';
+import CategorySection from '../../components/Common/CategorySection/CategorySection';
+import AboutSection from '../../components/Common/AboutSection';
 import YX1Img from '../../public/img/image-yx1-earphones.jpg';
 
 const earphonesData = [
@@ -27,6 +29,8 @@ const earphones = () => {
         description={earphonesData[0].description}
         newProduct={true}
       />
+      <CategorySection />
+      <AboutSection />
     </>
   );
 };

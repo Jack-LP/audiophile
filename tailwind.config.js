@@ -12,7 +12,7 @@ module.exports = {
         zx7Banner: "url('/img/image-speaker-zx7.jpg')",
       },
       fontFmily: {
-        body: ['Manrope'],
+        sans: 'Manrope, sans-serif',
       },
       colors: {
         'pale-orange': '#d87c49',

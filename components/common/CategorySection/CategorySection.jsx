@@ -7,9 +7,21 @@ import EarphonesImage from '../../../public/img/image-earphones.png';
 const CategorySection = () => {
   return (
     <div className='container flex gap-10 justify-between mx-auto flex-wrap'>
-      <CategoryCard image={HeadphonesImage} title={'Headphones'} top={24} />
-      <CategoryCard image={SpeakersImage} title={'Speakers'} top={24} />
-      <CategoryCard image={EarphonesImage} title={'Earphones'} top={20} />
+      <CategoryCard
+        image={HeadphonesImage}
+        title={'Headphones'}
+        href={'headphones'}
+      />
+      <CategoryCard
+        image={SpeakersImage}
+        title={'Speakers'}
+        href={'speakers'}
+      />
+      <CategoryCard
+        image={EarphonesImage}
+        title={'Earphones'}
+        href={'earphones'}
+      />
     </div>
   );
 };

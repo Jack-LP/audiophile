@@ -29,7 +29,7 @@ const headphonesData = [
 
 const headphones = () => {
   return (
-    <div>
+    <>
       <Head>
         <title>Audiophile &gt; Headphones</title>
         <link rel='icon' href='/favicon.ico' />
@@ -52,7 +52,7 @@ const headphones = () => {
         title={headphonesData[2].title}
         description={headphonesData[2].description}
       />
-    </div>
+    </>
   );
 };
 

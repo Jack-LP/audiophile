@@ -4,7 +4,7 @@ import AboutSectionImage from '../../public/img/image-best-gear.jpg';
 
 const AboutSection = () => {
   return (
-    <div className='container mx-auto flex gap-8 mt-[14rem]'>
+    <div className='container mx-auto flex gap-8'>
       <div className='flex flex-col gap-8 flex-1 justify-center'>
         <h1 className='uppercase font-bold text-6xl text-neutral-900'>
           Bringing you the <br /> <span className='text-pale-orange'>best</span>{' '}

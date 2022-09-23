@@ -3,7 +3,7 @@ import Image from 'next/image';
 import ProductBtn from '../../Common/ProductBtn';
 import ZX9Image from '../../../public/img/image-speaker-zx9.png';
 
-const FeaturedZX9 = () => {
+const FeaturedZX9 = ({ productData }) => {
   return (
     <div className='bg-pale-orange rounded-lg flex px-[15rem] py-24 justify-between items-center overflow-hidden bg-ripplePattern bg-no-repeat bg-[top_left_-2rem]'>
       <div className='w-[25rem] -mb-[7rem]'>
@@ -19,7 +19,12 @@ const FeaturedZX9 = () => {
           Upgrade to premium speakers that are phenomenally built to deliver
           truly remarkable sound.
         </p>
-        <ProductBtn bg={'bg-neutral-900'} text={'text-white'} />
+        <ProductBtn
+          bg={'bg-neutral-900'}
+          text={'text-white'}
+          category={'speakers'}
+          href={productData.speakers[0].id}
+        />
       </div>
     </div>
   );

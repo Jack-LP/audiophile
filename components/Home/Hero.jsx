@@ -1,7 +1,7 @@
 import React from 'react';
 import ProductBtn from '../Common/ProductBtn';
 
-const Hero = () => {
+const Hero = ({ productData }) => {
   return (
     <div className='bg-no-repeat bg-[bottom_right_8rem] bg-hero bg-charcoal min-h-[70vh] relative'>
       <div className='container mx-auto absolute top-1/2 -translate-y-1/2 left-0 right-0'>
@@ -16,7 +16,12 @@ const Hero = () => {
             Experience natural, lifelike audio and exceptional build quality
             made for the passionate music enthusiast
           </p>
-          <ProductBtn bg={'bg-pale-orange'} text={'text-white'} />
+          <ProductBtn
+            bg={'bg-pale-orange'}
+            text={'text-white'}
+            category={'headphones'}
+            href={productData.headphones[0].id}
+          />
         </div>
       </div>
     </div>

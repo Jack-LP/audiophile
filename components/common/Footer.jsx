@@ -6,7 +6,7 @@ import { FaFacebookSquare, FaInstagram, FaTwitter } from 'react-icons/fa';
 const Footer = () => {
   return (
     <div
-      className='bg-neutral-900 text-white py-16 mt-[14rem] relative after:content-[""] after:bg-pale-orange after:w-[6rem] 
+      className='bg-neutral-900 text-white py-16 relative after:content-[""] after:bg-pale-orange after:w-[6rem] 
     after:h-1 after:absolute after:top-0 after:left-[12rem]'
     >
       <div className='container mx-auto flex flex-col gap-10'>

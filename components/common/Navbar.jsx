@@ -22,7 +22,7 @@ const Navbar = () => {
             {navRoutes.map((route) => (
               <NavLink
                 key={route}
-                href={`/categories/${route}`}
+                href={`/${route}`}
                 text={route}
                 router={router}
               />
@@ -38,10 +38,10 @@ const Navbar = () => {
 };
 
 const NavLink = ({ href, text, router }) => {
-  const isActive = router.asPath === (href === '/categories/home' ? '/' : href);
+  const isActive = router.asPath === (href === '/home' ? '/' : href);
   return (
     <li>
-      <Link href={href === '/categories/home' ? '/' : href} passHref>
+      <Link href={href === '/home' ? '/' : href} passHref>
         <a
           className={`uppercase font-bold text-sm hover:text-pale-orange transition-colors ease-out ${
             isActive && 'text-pale-orange'

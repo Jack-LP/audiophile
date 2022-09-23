@@ -3,7 +3,7 @@ import Image from 'next/image';
 import YX1Image from '../../../public/img/image-earphones-yx1.jpg';
 import ProductBtn from '../../Common/ProductBtn';
 
-const FeaturedYX1 = () => {
+const FeaturedYX1 = ({ productData }) => {
   return (
     <div className='flex gap-8'>
       <div className='rounded-lg flex-1'>
@@ -23,6 +23,8 @@ const FeaturedYX1 = () => {
             bg={'bg-transparent'}
             text={'text-neutral-900'}
             border={'border-neutral-900'}
+            category={'earphones'}
+            href={productData.earphones[0].id}
           />
         </div>
       </div>

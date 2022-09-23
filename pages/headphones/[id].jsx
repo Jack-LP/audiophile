@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { useRouter } from 'next/router';
 import productData from '../../data.json';
+import ProductLayout from '../../components/Layout/ProductLayout';
+import ProductDisplay from '../../components/Categories/ProductDisplay';
 
 const HeadphoneProductPage = () => {
   const router = useRouter();
@@ -17,7 +19,21 @@ const HeadphoneProductPage = () => {
     });
   }, [pageId]);
 
-  return <div className='container mx-auto  py-24'>{pageId}</div>;
+  if (!pageData) {
+    return <div className='min-h-screen'></div>;
+  }
+
+  return (
+    <ProductLayout>
+      <div className='container mx-auto'>
+        <ProductDisplay
+          img={pageData.img}
+          title={pageData.title}
+          description={pageData.description}
+        />
+      </div>
+    </ProductLayout>
+  );
 };
 
 export default HeadphoneProductPage;

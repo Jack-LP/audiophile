@@ -31,7 +31,7 @@ const HeadphoneProductPage = () => {
       <Head>
         <title>{`Audiophile > ${pageData.title}`}</title>
       </Head>
-      <div className='container mx-auto'>
+      <div className='container mx-auto flex flex-col gap-[14rem] pb-[14rem]'>
         <ProductDisplay
           img={pageData.img}
           title={pageData.title}
@@ -40,8 +40,10 @@ const HeadphoneProductPage = () => {
           price={pageData.price}
           purchasePage={true}
         />
-        <Features />
-        <InTheBox />
+        <div className='grid grid-cols-4 gap-16'>
+          <Features text={pageData.features} />
+          <InTheBox boxContents={pageData.box} />
+        </div>
       </div>
     </ProductLayout>
   );

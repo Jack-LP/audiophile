@@ -1,5 +1,6 @@
 import React from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
 import Logo from '../../public/img/logo.svg';
 import { FaFacebookSquare, FaInstagram, FaTwitter } from 'react-icons/fa';
 
@@ -16,16 +17,16 @@ const Footer = () => {
           </div>
           <ul className='flex gap-12 text-neutral-200 uppercase tracking-wider'>
             <li>
-              <a href='#'>Home</a>
+              <Link href='/'>Home</Link>
             </li>
             <li>
-              <a href='#'>Headphones</a>
+              <Link href='/headphones'>Headphones</Link>
             </li>
             <li>
-              <a href='#'>Speakers</a>
+              <Link href='/speakers'>Speakers</Link>
             </li>
             <li>
-              <a href='#'>Earphones</a>
+              <Link href='/earphones'>Earphones</Link>
             </li>
           </ul>
         </div>

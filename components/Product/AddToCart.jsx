@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { PlusIcon, MinusIcon } from '@heroicons/react/20/solid';
+import { setToStorage } from '../../AccessLocalStorage';
 
 const CountButton = ({ count, setCount, type }) => {
   return (
@@ -28,8 +29,8 @@ const CountButton = ({ count, setCount, type }) => {
   );
 };
 
-const AddToCart = () => {
-  const [productCount, setProductCount] = useState(0);
+const AddToCart = ({ title, price }) => {
+  const [productCount, setProductCount] = useState(1);
 
   return (
     <div className='flex gap-4 items-center'>
@@ -48,7 +49,10 @@ const AddToCart = () => {
           />
         </div>
       </div>
-      <button className='bg-pale-orange text-white uppercase font-bold py-3 px-10 text-sm'>
+      <button
+        className='bg-pale-orange text-white uppercase font-bold py-3 px-10 text-sm'
+        onClick={() => setToStorage()}
+      >
         Add to cart
       </button>
     </div>

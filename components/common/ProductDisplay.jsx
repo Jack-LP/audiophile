@@ -40,7 +40,7 @@ const ProductDisplay = ({
         {purchasePage ? (
           <>
             <h3 className='font-bold'>{`£ ${numberWithCommas(price)}`}</h3>
-            <AddToCart />
+            <AddToCart title={title} price={price} />
           </>
         ) : (
           <ProductBtn

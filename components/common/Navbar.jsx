@@ -1,17 +1,20 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import Logo from '../../public/img/logo.svg';
+import CartModal from '../Cart/CartModal';
 import { ShoppingCartIcon } from '@heroicons/react/24/outline';
 import { useRouter } from 'next/router';
 
 const navRoutes = ['home', 'headphones', 'speakers', 'earphones'];
 
 const Navbar = () => {
+  const [showModal, setShowModal] = useState(false);
+
   const router = useRouter();
   return (
     <div className='bg-charcoal'>
-      <nav className='border-b-neutral-600 border-b-2 p-6 text-white container mx-auto'>
+      <nav className='border-b-neutral-600 border-b-2 p-6 text-white container mx-auto relative'>
         <ul className='flex justify-between uppercase items-center tracking-wider relative'>
           <li>
             <Link href='/'>
@@ -29,9 +32,12 @@ const Navbar = () => {
             ))}
           </div>
           <li>
-            <ShoppingCartIcon className='w-6 h-6 text-white' />
+            <button onClick={() => setShowModal(!showModal)}>
+              <ShoppingCartIcon className='w-6 h-6 text-white' />
+            </button>
           </li>
         </ul>
+        <CartModal showModal={showModal} />
       </nav>
     </div>
   );

@@ -1,6 +1,7 @@
 import React from 'react';
-import ProductBtn from '../Common/ProductBtn';
+import ProductBtn from './ProductBtn';
 import Image from 'next/image';
+import AddToCart from '../Product/AddToCart';
 
 const ProductDisplay = ({
   img,
@@ -10,7 +11,13 @@ const ProductDisplay = ({
   flip,
   category,
   id,
+  price,
+  purchasePage,
 }) => {
+  const numberWithCommas = (x) => {
+    return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
+  };
+
   return (
     <div className='grid grid-cols-2 container mx-auto'>
       <div
@@ -35,12 +42,19 @@ const ProductDisplay = ({
         </p>
         <h2 className='text-6xl font-bold uppercase'>{title}</h2>
         <p className='text-neutral-500 pr-[10rem]'>{description}</p>
-        <ProductBtn
-          bg={'bg-pale-orange'}
-          text={'text-white'}
-          category={category}
-          href={id}
-        />
+        {purchasePage ? (
+          <>
+            <h3 className='font-bold'>{`£ ${numberWithCommas(price)}`}</h3>
+            <AddToCart />
+          </>
+        ) : (
+          <ProductBtn
+            bg={'bg-pale-orange'}
+            text={'text-white'}
+            category={category}
+            href={id}
+          />
+        )}
       </div>
     </div>
   );

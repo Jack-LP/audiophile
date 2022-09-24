@@ -1,8 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import { useRouter } from 'next/router';
+import Head from 'next/head';
 import productData from '../../data.json';
 import ProductLayout from '../../components/Layout/ProductLayout';
-import ProductDisplay from '../../components/Categories/ProductDisplay';
+import ProductDisplay from '../../components/Common/ProductDisplay';
+import Features from '../../components/Product/Features';
+import InTheBox from '../../components/Product/InTheBox';
 
 const HeadphoneProductPage = () => {
   const router = useRouter();
@@ -25,12 +28,20 @@ const HeadphoneProductPage = () => {
 
   return (
     <ProductLayout>
+      <Head>
+        <title>{`Audiophile > ${pageData.title}`}</title>
+      </Head>
       <div className='container mx-auto'>
         <ProductDisplay
           img={pageData.img}
           title={pageData.title}
           description={pageData.description}
+          newProduct={pageData.new}
+          price={pageData.price}
+          purchasePage={true}
         />
+        <Features />
+        <InTheBox />
       </div>
     </ProductLayout>
   );

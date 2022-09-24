@@ -13,6 +13,7 @@ module.exports = {
       },
       fontFmily: {
         sans: 'Manrope, sans-serif',
+        mono: 'Space Mono',
       },
       colors: {
         'pale-orange': '#d87c49',

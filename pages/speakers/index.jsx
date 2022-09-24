@@ -3,7 +3,7 @@ import CategoryLayout from '../../components/Layout/CategoryLayout';
 import productData from '../../data.json';
 import Head from 'next/head';
 import CategoryHeader from '../../components/Categories/CategoryHeader';
-import ProductDisplay from '../../components/Categories/ProductDisplay';
+import ProductDisplay from '../../components/Common/ProductDisplay';
 
 const speakersData = productData.speakers;
 
@@ -15,7 +15,7 @@ const productDisplays = speakersData.map((item, i) => (
     description={item.description}
     category={'speakers'}
     id={item.id}
-    newProduct={i === 0 ? true : false}
+    newProduct={item.new}
     flip={i % 2 === 1 ? true : false}
   />
 ));

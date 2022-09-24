@@ -25,12 +25,7 @@ const ProductDisplay = ({
           flip ? 'order-2 justify-end' : 'order-0'
         }`}
       >
-        <Image
-          alt={title}
-          src={`/img/${img}.jpg`}
-          width='600px'
-          height='600px'
-        />
+        <Image alt={title} src={img} width='600px' height='600px' />
       </div>
       <div className='flex flex-col gap-6 justify-center items-start'>
         <p

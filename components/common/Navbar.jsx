@@ -12,13 +12,13 @@ const Navbar = () => {
   return (
     <div className='bg-charcoal'>
       <nav className='border-b-neutral-600 border-b-2 p-6 text-white container mx-auto'>
-        <ul className='flex justify-between uppercase items-center tracking-wider'>
+        <ul className='flex justify-between uppercase items-center tracking-wider relative'>
           <li>
             <Link href='/'>
               <Image alt='audiophile' src={Logo} className='cursor-pointer' />
             </Link>
           </li>
-          <div className='flex gap-10'>
+          <div className='flex gap-10 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2'>
             {navRoutes.map((route) => (
               <NavLink
                 key={route}

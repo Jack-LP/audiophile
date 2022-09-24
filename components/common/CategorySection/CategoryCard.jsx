@@ -7,7 +7,7 @@ const CategoryCard = ({ image, title, href }) => {
   return (
     <Link href={`/${href}`}>
       <div className='flex flex-col flex-1 gap-2 items-center bg-stone-200 rounded-lg pb-6 pt-[8rem] relative group cursor-pointer'>
-        <div className='w-[15rem] absolute -top-24'>
+        <div className='w-[15rem] absolute -top-24 group-hover:-translate-y-4 transition ease-out'>
           <Image alt={title} src={image} />
         </div>
         <h2 className='text-xl font-bold uppercase'>{title}</h2>

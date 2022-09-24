@@ -14,7 +14,12 @@
         "User manual": 1,
         "3.5mm 5m audio cable": 1,
         "Travel bag": 1
-      }
+      },
+      "gallery": [
+        "/img/XX99M2/image-gallery-1.jpg",
+        "/img/XX99M2/image-gallery-2.jpg",
+        "/img/XX99M2/image-gallery-3.jpg"
+      ]
     },
     {
       "title": "XX99 Mark I Headphones",
@@ -28,7 +33,12 @@
         "Replacement earcups": 2,
         "User manual": 1,
         "3.5mm 5m audio cable": 1
-      }
+      },
+      "gallery": [
+        "/img/XX99M1/image-gallery-1.jpg",
+        "/img/XX99M1/image-gallery-2.jpg",
+        "/img/XX99M1/image-gallery-3.jpg"
+      ]
     },
     {
       "title": "XX59 Headphones",
@@ -42,7 +52,12 @@
         "Replacement earcups": 2,
         "User manual": 1,
         "3.5mm 5m audio cable": 1
-      }
+      },
+      "gallery": [
+        "/img/XX59/image-gallery-1.jpg",
+        "/img/XX59/image-gallery-2.jpg",
+        "/img/XX59/image-gallery-3.jpg"
+      ]
     }
   ],
   "speakers": [
@@ -60,7 +75,12 @@
         "User manual": 1,
         "3.5mm 5m audio cable": 1,
         "10m optical cable": 1
-      }
+      },
+      "gallery": [
+        "/img/ZX9/image-gallery-1.jpg",
+        "/img/ZX9/image-gallery-2.jpg",
+        "/img/ZX9/image-gallery-3.jpg"
+      ]
     },
     {
       "title": "ZX7 Speaker",
@@ -75,7 +95,12 @@
         "User manual": 1,
         "3.5mm 7.5m audio cable": 1,
         "7.5m optical cable": 1
-      }
+      },
+      "gallery": [
+        "/img/ZX7/image-gallery-1.jpg",
+        "/img/ZX7/image-gallery-2.jpg",
+        "/img/ZX7/image-gallery-3.jpg"
+      ]
     }
   ],
   "earphones": [
@@ -93,7 +118,12 @@
         "User manual": 1,
         "USB-C charging cable": 1,
         "Travel pouch": 1
-      }
+      },
+      "gallery": [
+        "/img/YX1/image-gallery-1.jpg",
+        "/img/YX1/image-gallery-2.jpg",
+        "/img/YX1/image-gallery-3.jpg"
+      ]
     }
   ]
 }

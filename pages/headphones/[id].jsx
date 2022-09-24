@@ -6,6 +6,8 @@ import ProductLayout from '../../components/Layout/ProductLayout';
 import ProductDisplay from '../../components/Common/ProductDisplay';
 import Features from '../../components/Product/Features';
 import InTheBox from '../../components/Product/InTheBox';
+import Gallery from '../../components/Product/Gallery';
+import Recommendations from '../../components/Product/Recommendations';
 
 const HeadphoneProductPage = () => {
   const router = useRouter();
@@ -44,6 +46,8 @@ const HeadphoneProductPage = () => {
           <Features text={pageData.features} />
           <InTheBox boxContents={pageData.box} />
         </div>
+        <Gallery imgs={pageData.gallery} />
+        <Recommendations productData={productData} />
       </div>
     </ProductLayout>
   );

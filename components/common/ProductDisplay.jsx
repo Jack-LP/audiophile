@@ -3,21 +3,22 @@ import ProductBtn from './ProductBtn';
 import Image from 'next/image';
 import AddToCart from '../Product/AddToCart';
 
+const numberWithCommas = (x) => {
+  return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
+};
+
 const ProductDisplay = ({
   img,
   title,
   description,
+  productId,
   newProduct,
   flip,
   category,
-  id,
+  href,
   price,
   purchasePage,
 }) => {
-  const numberWithCommas = (x) => {
-    return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
-  };
-
   return (
     <div className='grid grid-cols-2 container mx-auto'>
       <div
@@ -40,14 +41,14 @@ const ProductDisplay = ({
         {purchasePage ? (
           <>
             <h3 className='font-bold'>{`£ ${numberWithCommas(price)}`}</h3>
-            <AddToCart title={title} price={price} />
+            <AddToCart title={title} price={price} productId={productId} />
           </>
         ) : (
           <ProductBtn
             bg={'bg-pale-orange'}
             text={'text-white'}
             category={category}
-            href={id}
+            href={href}
           />
         )}
       </div>

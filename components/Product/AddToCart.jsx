@@ -1,6 +1,7 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
 import { PlusIcon, MinusIcon } from '@heroicons/react/20/solid';
-import { setToStorage } from '../../AccessLocalStorage';
+import AppContext from '../../context/AppContext';
+import PreviousMap from 'postcss/lib/previous-map';
 
 const CountButton = ({ count, setCount, type }) => {
   return (
@@ -29,8 +30,10 @@ const CountButton = ({ count, setCount, type }) => {
   );
 };
 
-const AddToCart = ({ title, price }) => {
+const AddToCart = ({ title, price, productId }) => {
   const [productCount, setProductCount] = useState(1);
+
+  const { cartItems, setCartItems } = useContext(AppContext);
 
   return (
     <div className='flex gap-4 items-center'>
@@ -51,7 +54,17 @@ const AddToCart = ({ title, price }) => {
       </div>
       <button
         className='bg-pale-orange text-white uppercase font-bold py-3 px-10 text-sm'
-        onClick={() => setToStorage()}
+        onClick={() =>
+          setCartItems((prev) => [
+            ...prev,
+            {
+              item: title,
+              price: price,
+              id: productId,
+              count: productCount,
+            },
+          ])
+        }
       >
         Add to cart
       </button>

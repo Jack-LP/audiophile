@@ -1,15 +1,19 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import Logo from '../../public/img/logo.svg';
 import CartModal from '../Cart/CartModal';
 import { ShoppingCartIcon } from '@heroicons/react/24/outline';
 import { useRouter } from 'next/router';
+import AppContext from '../../context/AppContext';
 
 const navRoutes = ['home', 'headphones', 'speakers', 'earphones'];
 
 const Navbar = () => {
   const [showModal, setShowModal] = useState(false);
+
+  const { cartItems, totalItems } = useContext(AppContext);
+  console.log(cartItems);
 
   const router = useRouter();
   return (
@@ -34,6 +38,7 @@ const Navbar = () => {
           <li>
             <button onClick={() => setShowModal(!showModal)}>
               <ShoppingCartIcon className='w-6 h-6 text-white' />
+              <span>{totalItems}</span>
             </button>
           </li>
         </ul>

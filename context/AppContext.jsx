@@ -1,13 +1,25 @@
-import { createContext, useState } from 'react';
+import { createContext, useState, useEffect } from 'react';
 
 const AppContext = createContext();
 
 export const AppWrapper = ({ children }) => {
   const [cartItems, setCartItems] = useState([]);
+  const [totalItems, setTotalItems] = useState(0);
+  const [totalPrice, setTotalPrice] = useState(0);
 
-  const totalItems = cartItems.reduce((acc, obj) => {
-    return acc + obj.count;
-  }, 0);
+  useEffect(() => {
+    setTotalItems(
+      cartItems.reduce(function (prev, cur) {
+        return prev + cur.count;
+      }, 0)
+    );
+
+    setTotalPrice(
+      cartItems.reduce(function (prev, cur) {
+        return prev + cur.price * cur.count;
+      }, 0)
+    );
+  }, [cartItems]);
 
   const clearCart = () => {
     setCartItems([]);
@@ -15,7 +27,7 @@ export const AppWrapper = ({ children }) => {
 
   return (
     <AppContext.Provider
-      value={{ cartItems, setCartItems, clearCart, totalItems }}
+      value={{ cartItems, setCartItems, clearCart, totalItems, totalPrice }}
     >
       {children}
     </AppContext.Provider>

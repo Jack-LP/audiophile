@@ -55,15 +55,25 @@ const AddToCart = ({ title, price, productId }) => {
       <button
         className='bg-pale-orange text-white uppercase font-bold py-3 px-10 text-sm'
         onClick={() =>
-          setCartItems((prev) => [
-            ...prev,
-            {
-              item: title,
-              price: price,
-              id: productId,
-              count: productCount,
-            },
-          ])
+          setCartItems((curr) => {
+            if (curr.find((item) => item.id === productId) == null) {
+              return [
+                ...curr,
+                {
+                  item: title,
+                  id: productId,
+                  price: price,
+                  count: productCount,
+                },
+              ];
+            } else {
+              return curr.map((item) => {
+                if (item.id === productId) {
+                  return { ...item, count: item.count + productCount };
+                }
+              });
+            }
+          })
         }
       >
         Add to cart

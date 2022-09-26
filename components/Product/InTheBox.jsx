@@ -8,7 +8,7 @@ const InTheBox = ({ boxContents }) => {
         {Object.entries(boxContents).map((item) => (
           <div className='flex gap-4' key={item[0]}>
             <span className='font-bold text-pale-orange'>{`${item[1]}x`}</span>
-            <spam className='text-neutral-500'>{item[0]}</spam>
+            <span className='text-neutral-500'>{item[0]}</span>
           </div>
         ))}
       </div>

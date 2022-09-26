@@ -40,6 +40,7 @@ const SpeakerProductPage = () => {
           description={pageData.description}
           newProduct={pageData.new}
           price={pageData.price}
+          productId={pageData.id}
           purchasePage={true}
         />
         <div className='grid grid-cols-4 gap-16'>

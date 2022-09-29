@@ -70,6 +70,8 @@ const AddToCart = ({ title, price, productId }) => {
               return curr.map((item) => {
                 if (item.id === productId) {
                   return { ...item, count: item.count + productCount };
+                } else {
+                  return item;
                 }
               });
             }

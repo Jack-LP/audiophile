@@ -2,10 +2,7 @@ import React from 'react';
 import ProductBtn from './ProductBtn';
 import Image from 'next/image';
 import AddToCart from '../Product/AddToCart';
-
-const numberWithCommas = (x) => {
-  return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
-};
+import formatCurrency from '../../utilities/formatCurrency';
 
 const ProductDisplay = ({
   img,
@@ -40,7 +37,7 @@ const ProductDisplay = ({
         <p className='text-neutral-500 pr-[10rem]'>{description}</p>
         {purchasePage ? (
           <>
-            <h3 className='font-bold'>{`£ ${numberWithCommas(price)}`}</h3>
+            <h3 className='font-bold'>{`£ ${formatCurrency(price)}`}</h3>
             <AddToCart title={title} price={price} productId={productId} />
           </>
         ) : (

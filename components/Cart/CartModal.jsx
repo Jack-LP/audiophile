@@ -1,10 +1,7 @@
 import React, { useContext } from 'react';
 import CartItem from './CartItem';
 import AppContext from '../../context/AppContext';
-
-const numberWithCommas = (x) => {
-  return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
-};
+import formatCurrency from '../../utilities/formatCurrency';
 
 const CartModal = ({ showModal }) => {
   const { cartItems, clearCart, totalItems, totalPrice } =
@@ -21,13 +18,29 @@ const CartModal = ({ showModal }) => {
           Remove All
         </button>
       </div>
-      <div className='flex flex-col gap-2'></div>
+      <div className='flex flex-col gap-2'>
+        {cartItems.map((product) => (
+          <CartItem
+            title={product.item}
+            key={product.id}
+            price={product.price}
+            count={product.count}
+            productId={product.id}
+          />
+        ))}
+      </div>
       <div className='flex justify-between items-center'>
         <span className='uppercase text-neutral-500'>Total:</span>
         <span className='font-bold text-lg'>
-          £ {numberWithCommas(totalPrice)}
+          £ {formatCurrency(totalPrice)}
         </span>
       </div>
+      <button
+        className='bg-pale-orange text-white 
+        uppercase font-bold py-3 px-10 text-sm w-full'
+      >
+        Checkout
+      </button>
     </div>
   ) : null;
 };

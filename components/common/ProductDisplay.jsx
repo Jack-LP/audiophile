@@ -38,7 +38,12 @@ const ProductDisplay = ({
         {purchasePage ? (
           <>
             <h3 className='font-bold'>{`£ ${formatCurrency(price)}`}</h3>
-            <AddToCart title={title} price={price} productId={productId} />
+            <AddToCart
+              title={title}
+              price={price}
+              productId={productId}
+              img={img}
+            />
           </>
         ) : (
           <ProductBtn

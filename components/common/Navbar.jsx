@@ -18,7 +18,7 @@ const Navbar = () => {
   const router = useRouter();
   return (
     <div className='bg-charcoal'>
-      <nav className='border-b-neutral-600 border-b-2 p-6 text-white container mx-auto relative'>
+      <nav className='border-b-neutral-600 border-b-2 p-6 text-white container mx-auto'>
         <ul className='flex justify-between uppercase items-center tracking-wider relative'>
           <li>
             <Link href='/'>
@@ -36,13 +36,20 @@ const Navbar = () => {
             ))}
           </div>
           <li>
-            <button onClick={() => setShowModal(!showModal)}>
+            <button
+              onClick={() => setShowModal(!showModal)}
+              className='relative'
+            >
               <ShoppingCartIcon className='w-6 h-6 text-white' />
-              <span>{totalItems}</span>
+              {totalItems !== 0 && (
+                <span className='absolute -top-3 -right-3 bg-pale-orange text-white w-6 h-6 rounded-full text-xs flex justify-center items-center'>
+                  {totalItems}
+                </span>
+              )}
             </button>
           </li>
         </ul>
-        <CartModal showModal={showModal} />
+        <CartModal showModal={showModal} setShowModal={setShowModal} />
       </nav>
     </div>
   );

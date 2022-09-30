@@ -1,7 +1,6 @@
 import React, { useState, useContext } from 'react';
 import { PlusIcon, MinusIcon } from '@heroicons/react/20/solid';
 import AppContext from '../../context/AppContext';
-import PreviousMap from 'postcss/lib/previous-map';
 
 const CountButton = ({ count, setCount, type }) => {
   return (
@@ -30,10 +29,9 @@ const CountButton = ({ count, setCount, type }) => {
   );
 };
 
-const AddToCart = ({ title, price, productId }) => {
+const AddToCart = ({ title, price, productId, img }) => {
   const [productCount, setProductCount] = useState(1);
-
-  const { cartItems, setCartItems } = useContext(AppContext);
+  const { setCartItems } = useContext(AppContext);
 
   return (
     <div className='flex gap-4 items-center'>
@@ -64,6 +62,7 @@ const AddToCart = ({ title, price, productId }) => {
                   id: productId,
                   price: price,
                   count: productCount,
+                  img: img,
                 },
               ];
             } else {

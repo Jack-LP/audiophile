@@ -1,4 +1,5 @@
 import React, { useContext } from 'react';
+import Link from 'next/link';
 import CartItem from './CartItem';
 import AppContext from '../../context/AppContext';
 import formatCurrency from '../../utilities/formatCurrency';
@@ -51,12 +52,14 @@ const CartModal = ({ showModal, setShowModal }) => {
                 £ {formatCurrency(totalPrice)}
               </span>
             </div>
-            <button
-              className='bg-pale-orange text-white 
+            <Link href='/checkout' onClick={() => setShowModal(false)}>
+              <button
+                className='bg-pale-orange text-white 
         uppercase font-bold py-3 px-10 text-sm w-full'
-            >
-              Checkout
-            </button>
+              >
+                Checkout
+              </button>
+            </Link>
           </>
         )}
       </div>

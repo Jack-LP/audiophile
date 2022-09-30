@@ -14,7 +14,7 @@ const productDisplays = earphonesData.map((item, i) => (
     title={item.title}
     description={item.description}
     category={'earphones'}
-    id={item.id}
+    href={item.id}
     newProduct={item.new}
     flip={i % 2 === 1 ? true : false}
   />

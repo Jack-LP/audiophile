@@ -37,7 +37,7 @@ const CheckoutSummary = () => {
         <div className='flex justify-between'>
           <span className='uppercase text-neutral-500'>{`VAT (Included)`}</span>
           <span className='uppercase font-bold'>{`£ ${formatCurrency(
-            (totalPrice / 100) * 20
+            ((totalPrice / 100) * 20).toFixed(2)
           )}`}</span>
         </div>
         <div className='flex justify-between mt-4'>

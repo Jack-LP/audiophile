@@ -11,9 +11,7 @@ const navRoutes = ['home', 'headphones', 'speakers', 'earphones'];
 
 const Navbar = () => {
   const [showModal, setShowModal] = useState(false);
-
-  const { cartItems, totalItems } = useContext(AppContext);
-  console.log(cartItems);
+  const { totalItems } = useContext(AppContext);
 
   const router = useRouter();
   return (

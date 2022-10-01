@@ -52,10 +52,11 @@ const CartModal = ({ showModal, setShowModal }) => {
                 £ {formatCurrency(totalPrice)}
               </span>
             </div>
-            <Link href='/checkout' onClick={() => setShowModal(false)}>
+            <Link href='/checkout'>
               <button
                 className='bg-pale-orange text-white 
         uppercase font-bold py-3 px-10 text-sm w-full'
+                onClick={() => setShowModal(false)}
               >
                 Checkout
               </button>
